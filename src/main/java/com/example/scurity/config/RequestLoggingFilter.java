@@ -40,6 +40,6 @@ public class RequestLoggingFilter extends OncePerRequestFilter {
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
         String path = request.getRequestURI();
-        return path.startsWith("/h2-console") || path.startsWith("/actuator");
+        return path.startsWith("/actuator");
     }
 }
